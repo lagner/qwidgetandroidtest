@@ -27,18 +27,15 @@ CustomItem::CustomItem(const QString &path) : filepath(path)
 
     title = new QLabel(this);
     title->setText("<H1>Title text</H1>");
-    title->setStyleSheet("QLabel { color : white; }");
+    title->setStyleSheet("QLabel { color : white; background: transparent; }");
 
     lout->addWidget(title, 0, 0, 1, 2);
 
-    label = new QLabel(this);
-    QString text("Usually it is the other way around, an icon is supposed to provide different resolutions. But to do what you want you need to find the closest size supported by the icon, given an initial size as reference.");
-    for (int i = 0; i < 4; ++i) {
-        text += filepath + " ";
-    }
+    QString text("An encyclopedia or encyclopaedia (also spelled encyclopædia, see spelling differences)[1] is a type of reference work or compendium holding a comprehensive summary of information from either all branches of knowledge or a particular branch of knowledge.[2] Encyclopedias are divided into articles or entries, which are usually accessed alphabetically by article name.");
 
+    label = new QLabel(this);
     label->setText(text);
-    label->setStyleSheet("QLabel { color: white; qproperty-alignment: AlignTop; qproperty-wordWrap: true;}");
+    label->setStyleSheet("QLabel { color: white; background: transparent; qproperty-alignment: AlignTop; qproperty-wordWrap: true;}");
 
     lout->addWidget(label, 1, 0, 1, 1);
 
